@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^users/[0-9]+$ server.php
