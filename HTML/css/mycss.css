@@ -1,8 +1,14 @@
+body {
+  padding: 2em; 
+  background: #dbe4e3;
+}
+/*flex wrapper*/
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
   font-weight: bold;
   text-align: center;
+  font-family: 'Lekton', sans-serif;
 }
 
 .wrapper > * {
@@ -10,9 +16,14 @@
   flex: 1 100%;
 }
 
-.header {
+#header {
   background: tomato;
   height: 30vh;
+}
+
+#head-txt {
+   font-size: 24px;
+   font-weight: 700;  
 }
 
 .footer {
@@ -24,7 +35,6 @@
   background: deepskyblue;
   justify-content: center;
 }
-
 
 .aside-1 {
   background: gold;
@@ -54,6 +64,3 @@
   .footer  { order: 5; }
 }
 
-body {
-  padding: 2em; 
-}

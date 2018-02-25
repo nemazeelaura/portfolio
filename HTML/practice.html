@@ -6,19 +6,69 @@
     <!-- 	style sheets and bootstrap -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
-
 	<title>animate sandbox</title>
+	
+    <!--  adding styles to animations section one comein in first section 2 2 seconds later -->
+    <style>
+      #section-1 {
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+      #section-2 {
+      animation-delay: 2s;
+    </style>
+
 </head>
 <body>
 	<div class="container">
-	  <!-- 	added bootrasp classes bg-primary(makes blue) text-white p-5 (adds padding) -->
-      <header class="text-center bg-primary text-white p-5">
+	  <!-- 	added animate to class added bootrasp classes bg-primary(makes blue) text-white p-5 (adds padding) -->
+      <header class="animated slideInDown text-center bg-primary text-white p-5">
 
       	<h1 class="display-4">Animate.css Sandbox</h1>
-
      </header>
+     <!-- added animate to class bg-faded -makes gray background p-5 my-3- adds margin -->
+     <div id="section-1" class="animated slideInLeft bg-faded p-5 my-3">
+     	<h1>section one</h1>
+     	<!-- type lorem40tab for 40 words of text-->
+     	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, voluptatem! Nostrum, enim. Odio aliquam ducimus ut numquam ea ab reprehenderit laudantium minus sit, vel earum amet deserunt illum reiciendis voluptas tempora cumque omnis veritatis, nam saepe natus! Voluptatem odit, ipsam?</p>
+     </div>
+     <div id="section-2" class="animated slideInRight bg-faded p-5 my-3">
+     	<h1 id="anim-head">section two</h1>
+     	<!-- type lorem40tab for 40 words of text-->
+     	<p id="anim-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, voluptatem! Nostrum, enim. Odio aliquam ducimus ut numquam ea ab reprehenderit laudantium minus sit, vel earum amet deserunt illum reiciendis voluptas tempora cumque omnis veritatis, nam saepe natus! Voluptatem odit, ipsam?</p>
+     	<button id="animateBtn2" class="btn btn-primary">animate2</button>
+     </div>
+    
+ 	</div>
+ 	<!-- end contiainer -->
+ 	<!-- jquery -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>		
 
-	</div>
+ 	<script>
+
+ 		$(function(){
+ 			//animate on click         
+              $('#animateBtn2').click(function() {
+                 animate('header', 'slideOut');
+                 setTimeout(function() {
+                   $('header').css('visibility', 'hidden');
+                 }, 1000);
+                 return false;
+             });
+ 			//animate
+ 			function animate(element, animation){
+              $(element).addClass('animated', +animation);
+              var wait = setTimeout(function(){
+              	$(element).removeClass('animated ' +animation);
+              }, 1000); //wait then remove animation
+ 			}
+ 		});
+ 	</script>
 	
 </body>
 </html>
+
+ 
+
+
