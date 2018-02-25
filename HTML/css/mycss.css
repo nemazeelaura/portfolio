@@ -6,7 +6,6 @@ body {
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
-  font-weight: bold;
   text-align: center;
   font-family: 'Lekton', sans-serif;
 }
@@ -17,13 +16,19 @@ body {
 }
 
 #header {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
   background: tomato;
   height: 30vh;
+  justify-content: center;
 }
 
 #head-txt {
-   font-size: 24px;
-   font-weight: 700;  
+   flex: 1;
+   font-size: 36px; 
+   font-weight: 400;
 }
 
 .footer {
@@ -32,8 +37,7 @@ body {
 
 .main {
   text-align: center;
-  background: deepskyblue;
-  justify-content: center;
+  background: url();
 }
 
 .aside-1 {

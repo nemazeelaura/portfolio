@@ -249,7 +249,7 @@ ol {
 -------------------------------------------------*/
 
 #home {
-    background: url(../img/head.png);
+    background: url("../img/head.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -853,7 +853,7 @@ p#dutchess {
 -------------------------------------------------*/
 
 #testimonials {
-    background: url(../img/testimonials.png);
+    background: url("../img/testimonials.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
