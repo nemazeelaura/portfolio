@@ -3,33 +3,104 @@ body {
   background: #e5e5e5;
   font-family: 'Lekton', sans-serif;
 }
-
-.container-1, .container-2 {
-  display:flex;
-  align-items: center;
-  flex-direction: column;
+/*images are 600 x 600px scale down on screens smaller that 600px*/
+@media only screen and (max-width: 600px) {
+    img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
-.container-1 div, .container-2. div {
-  border: 1px #ccc solid;
-  padding: 10px;
+.container-1 {
+  display: flex;
+  flex-direction: column; 
 }
 
-.con2-box-1, .con2-box-2 {
-  width: 50%;
+.container-1 div {
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+  text-align: center;
 }
+
+
+header {
+  flex: 1;
+  text-align: center;
+  background: white;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+/*header text*/
+#head {
+  color: #100f0f;
+  font-style: 400;
+}
+
+/*before and after headings above images*/
+.sub {
+  margin-top: 10px;
+  color: white;
+  text-align: left;
+  font-style: 700;
+}
+
+mark {
+   background: tomato;	
+}
+
 .box-1 {
-	flex: 1;
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
 }
 
 .box-2 {
-	flex: 2;
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
 }
 
-.con2-box-1{
-	flex: 1;
+.box-3 {
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
 }
 
-.con2-box-2 {
-	flex: 2;
+.box-4 {
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
+}
+
+.box-5 {
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
+}
+
+.box-6 {
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
+}
+
+.box-7 {
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
+}
+
+.box-8 {
+  flex: 1;
+/*  flex-basis: 30%;*/
+  background: white;
+}
+
+img {
+	max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
 }
