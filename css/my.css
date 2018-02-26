@@ -1,11 +1,10 @@
 body {
-  margin: 0 auto;
   padding: 2em; 
   background: #e5e5e5;
   font-family: 'Lekton', sans-serif;
 }
 /*images are 600 x 600px scale down on screens smaller that 600px*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     img {
         width: 300px;
         height: 300px;
@@ -15,8 +14,8 @@ body {
 .container-1 {
   display: flex;
   flex-direction: column; 
-  max-width: 1000px;
   text-align: center;
+  align-items: center;
 }
 
 .container-1 div {
@@ -55,17 +54,18 @@ mark {
    background: tomato;	
 }
 
-/*adding styles to animations section 1 comes in first. section 2, 2 seconds later*/
+/*adding styles to animations section 1 comes in first. section 2, 1 second later*/
 .section-1 {
   background: white;
-  animation-delay: 1s;
+  animation-delay: 0s;
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
 .section-2 {
   background: white;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
 } 
 
 #box-1 {
@@ -106,6 +106,21 @@ mark {
 #box-8 {
   flex: 1;
   background: white;
+}
+
+#box-9 {
+  flex: 1;
+  background: none;
+  text-align: left;
+  padding-left: 10px;
+}
+
+a {
+  color: #100f0f;
+}
+
+a:hover {
+  color: #100f0f;
 }
 
 img {
