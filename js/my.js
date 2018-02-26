@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
   
   
-  animationClick('.first-image', 'rotateIn'); // adding animate to my story images on click
+  animationClick('.animateBtn1', 'rotateIn'); // adding animate to my story images on click
 
 function animationClick(element, animation){
   element = $(element);
