@@ -12,7 +12,7 @@ link to github https://github.com/nemazeelaura/portfolio
 
 ![portfolio cover](/img/portfolio.png?raw=true "portfolio cover")
 
-![before and after page](/img/beforeafter.png?raw=true "before adn after page")
+![before and after page](/img/beforeafter.png?raw=true "before and after page")
 
 ![wireframe](/img/wireframe.png?raw=true "wireframe")
 
