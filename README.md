@@ -14,7 +14,7 @@ link to github https://github.com/nemazeelaura/portfolio
 
 ![before and after page](/img/beforeafter.png?raw=true "before adn after page")
 
-![wireframe](/img/wireframe.jpg.png?raw=true "wireframe")
+![wireframe](/img/wireframe.jpg?raw=true "wireframe")
 
 ## Approach
 
