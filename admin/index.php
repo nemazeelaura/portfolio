@@ -33,7 +33,7 @@
                         <h2 class="pull-left">Contact Form Details</h2>
                         <a href="create.php" class="btn btn-success pull-right">Add New Contact</a>
                     </div>
-                    <?php
+                    <?php   
                     // Include config file
                     require_once 'config.php';
                     

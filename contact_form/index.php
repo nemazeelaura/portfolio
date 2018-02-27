@@ -50,52 +50,16 @@
 				$result = mysqli_query($link, $query);
 
 			}
-			// *** Display the content of the database underneath the form ***
-			// FROM: http://webdevzoom.com/display-mysql-data-html-5-table-using-php/
-
-			$sql = 'SELECT * FROM contact';
-			$query = mysqli_query($link, $sql);
-
-			if (!$query) {
-				die ('SQL Error: ' . mysqli_error($conn));
-			}
-			?>
-			<h1>Current content of database</h1>
-			<table class="data-table">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Subject</th>
-						<th>Message</th>
-					</tr>
-				</thead>
-				<tbody>
-				<?php
-				$no 	= 1;
-				while ($row = mysqli_fetch_array($query))
-				{
-					$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
-					echo '<tr>
-							<td>'.$row['id'].'</td>
-							<td>'.$row['name'].'</td>
-							<td>'.$row['subject'].'</td>
-							<td>'.$row['message'].'</td>
-						</tr>';
-					$no++;
-				}
 				
-				 /*
 				$name    = $_POST['name'];
 				$email   = $_POST['email'];
 				$subject = $_POST['subject'];
 				$message = $_POST['message'];
-	             */
-				 
+	             
 				// Create the email and send the message
 				$to = 'info@lauranemazee.com'; 
 				$email_subject = "Lauranemazee.com:  $subject";
-				$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $subject\n\nMessage:\n$message";
+				$email_body = "You have received a new message from your website contact form http://www.lauranemazee.com/contact_form/ \n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\Subject: $subject\n\nMessage:\n$message";
 				$headers = "From: noreply@lauranemazee.com\n"; 
 				$headers .= "Reply-To: $email_address";	
 				mail($to,$email_subject,$email_body,$headers);

@@ -2,43 +2,25 @@ $(document).ready(function() {
 
 
     $(function(){
-      //animate on click         
-              $('#animateBtn2').click(function() {
-                 animate('header', 'slideOut');
-                 setTimeout(function() {
-                   $('header').css('visibility', 'hidden'); 
-                 }, 1000);
-                 return false;
+      //changing movienight to back of postcard on click    
+              $('#more').click(function() {
+                   $('#change').attr('src', 'img/animate/movieback.png'); 
              });
-      //animate
-      function animate(element, animation){
-              $(element).addClass('animated', +animation);
-              var wait = setTimeout(function(){
-                $(element).removeClass('animated ' +animation);
-              }, 1000); //wait then remove animation
-      }
-    });
 
-     $(function(){
-      //animate on click         
-              $('#animateBtn2').click(function() {
-                 animate('header', 'slideOut');
-                 setTimeout(function() {
-                   $('header').css('visibility', 'hidden'); 
-                 }, 1000);
-                 return false;
+              $('#more1').click(function() {
+                   $('#change1').attr('src', 'img/animate/xmaslight600.png'); 
              });
-      //animate
-      function animate(element, animation){
-              $(element).addClass('animated', +animation);
-              var wait = setTimeout(function(){
-                $(element).removeClass('animated ' +animation);
-              }, 1000); //wait then remove animation
-      }
-    });
+
+               $('#more2').click(function() {
+                   $('#change2').attr('src', 'img/animate/bellacoupon.png'); 
+             });
+                $('#more3').click(function() {
+                   $('#change3').attr('src', 'img/animate/march2cc.png'); 
+             });
+
+          });
   
-  
-  animationClick('.animateBtn1', 'rotateIn'); // adding animate to my story images on click
+  animationClick('img', 'rotateIn'); // adding animate to images on click
 
 function animationClick(element, animation){
   element = $(element);
@@ -51,10 +33,7 @@ function animationClick(element, animation){
       }, 2000);
     }
   );
-};
+}
 
- 
 
 });
-
-

@@ -1,4 +1,6 @@
 <?php
+// --------- File: create.php --------- 
+
 // Include config file
 require_once 'config.php';
  
@@ -9,64 +11,7 @@ $name_err = $email_err = $subject_err = $message_err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 	
-    // Validate name
-    $input_name = trim($_POST["name"]);
-    if(empty($input_name)){
-        $name_err = "Please enter a name.";
-    } elseif(!filter_var(trim($_POST["name"]), FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z'-.\s ]+$/")))){
-        $name_err = 'Please enter a valid name.';
-    } else{
-        $name = $input_name;
-    }
-	
-	// Validate EMAIL
-    $input_email = trim($_POST["email"]);
-    if(empty($input_email)){
-        $email_err = 'Please enter an email.'; 
-    } elseif(!filter_var($input_email, FILTER_VALIDATE_EMAIL)) {
-        $email_err = 'Please enter a valid email.';		
-    } else{
-        $email = $input_email;
-    }
-    
-    // Validate SUBJECT
-    $input_subject = trim($_POST["subject"]);
-    if(empty($input_subject)){
-        $subject_err = 'Please enter an subject.';     
-    } else{
-        $subject = $input_subject;
-    }
-	
-     // Validate MESSAGE
-    $input_message= trim($_POST["message"]);
-    if(empty($input_subject)){
-        $message_err = 'Please enter an message.';     
-    } else{
-        $message = $input_message;
-    }
-    
-    /* Validate salary - NOT IN USE
-    $input_salary = trim($_POST["salary"]);
-    if(empty($input_salary)){
-        $salary_err = "Please enter the salary amount.";     
-    } elseif(!ctype_digit($input_salary)){
-        $salary_err = 'Please enter a positive integer value.';
-    } else{
-        $salary = $input_salary;
-    }
-    */
-	
-    // Check input errors before inserting in database
-    if(empty($name_err) && empty($email_err) && empty($subject_err) && empty($message_err)){
-        // Prepare an insert statement
-        $sql = "INSERT INTO contact (name, email, subject, message) VALUES (?, ?, ?, ?)";
-         
-		// echo "$name $email $subject $message";
-		echo "NAME =" . $name .  " EMAIL =" . $email . " SUBJECT =" . $subject . " Message =" .  $message . "<br>";
-		// echo "$name_err $email_err $subject_err $message_err";
-
-        if($stmt = mysqli_prepare($link, $sql)){
-			
+    // Validate name`
             // Bind variables to the prepared statement as parameters
 			// "ssss" = all 4 variables are strings
             mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_email, $param_subject, $param_message);

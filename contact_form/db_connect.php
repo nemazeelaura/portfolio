@@ -1,10 +1,10 @@
 <?php
 // --- db_connect.php ---
 // This file makes the connection to the MySQL database
-// $host = "localhost";               // Localhost - uncomment when 
+// $host = "localhost";               // Localhost - Uncomment if you developeing on local host
 $host     = "mysql.lauranemazee.com"; // Dreamhost 
-$user     = "moominmamma";            // the username specified when setting up the database
-$password = "OkkiMan@77";             // the password specified when setting up the database
+$user     = "nemazee_user";            // the username specified when setting up the database
+$password = "ArvDen@99";             // the password specified when setting up the database
 $database = "nemazee_portfolio_db";   // the database name chosen when setting up the database 
 
 // Connect to the database
